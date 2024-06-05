@@ -7,3 +7,6 @@ def hellowordld(request):
 
 def article_year(request, year):
     return HttpResponse(f"{year}year all article");
+
+def article_flag(request, year, month, flag):
+    return HttpResponse(f"{year}年{month}月的{flag}");
