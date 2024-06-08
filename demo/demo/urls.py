@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from app01.views import hellowordld,article_year,article_flag, get_current_datetime
+from app01.views import hellowordld,article_year,article_flag
 
 
 urlpatterns = [
