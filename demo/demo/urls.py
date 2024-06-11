@@ -23,5 +23,6 @@ urlpatterns = [
     path('article/year/<int:year>',article_year),
     path('article/<int:year>/<int:month>/<slug:flag>',article_flag),
     path('admin/', admin.site.urls),
-    path('article/', include("app01.urls"))
+    path('article/', include("app01.urls")),
+    path('account/', include('account.urls'))
 ]
