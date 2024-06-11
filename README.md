@@ -1,1 +1,1 @@
-Djagngo路由小练习
+第一版 了解Djagngo的目录结构 Djagngo路由小练习
