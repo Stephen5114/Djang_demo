@@ -8,6 +8,11 @@ def login(request):
         username = request.POST.get('username')
         password = request.POST.get('password')
         return HttpResponse(f"用户{username}的密码是{password}")
+    elif request.method == 'GET':
+        print(f'Header information:{request.headers.get('User-Agent')}')
+        FORBIDDEN_IP = ['127.0.0.1', '0.0.0.0']
+        if request.META.get('REMOTE_ADDR') in FORBIDDEN_IP:
+            return HttpResponse('Error Exception')
     return render(request, 'login.html')
 
 class RegisterView(View):
