@@ -13,5 +13,11 @@
             <li>{{ article }}</li>
         {% endfor %}
     </ul>
+    <p>{{info.name}}年龄{{info.age}}</p>
+    <p>喜欢的编程语言:
+        {% for language in info.programming_language %}
+        {{ language }}{% if not loop.last %},{% endif %}
+        {% endfor %}
+    </p>
 </body>
 </html>

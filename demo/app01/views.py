@@ -27,9 +27,15 @@ def list(request):
         '第二篇文章: Django的mvt模式',
         '第三篇文章: Django的视图'
     ]
+    info = {
+        'name': 'andy',
+        'age': 18,
+        'programming_language': ['python','java', 'c']
+    }
     return render(request, 'list.html',{
         'author': author,
         'number': article_number,
-        'article_list': article_list
+        'article_list': article_list,
+        'info': info
     })
     
