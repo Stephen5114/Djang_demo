@@ -18,4 +18,18 @@ def get_current_datetime(request):
     format_today = today.strftime("%y-%m-%d")
     html = f"<h1>今天是{format_today}</h1>"
     return HttpResponse(html)
+
+def list(request):
+    author = 'andy'
+    article_number = 20
+    article_list = [
+        '第一篇文章:什么是Django',
+        '第二篇文章: Django的mvt模式',
+        '第三篇文章: Django的视图'
+    ]
+    return render(request, 'list.html',{
+        'author': author,
+        'number': article_number,
+        'article_list': article_list
+    })
     
